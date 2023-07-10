@@ -10,13 +10,13 @@ export GIT_REPO=https://github.com/schnatterer/argocd-autopilot-example
 # Basic setup
 argocd-autopilot repo bootstrap
 
-# First apparg
+# Add first app
 argocd-autopilot project create staging
-argocd-autopilot app create my-app --app github.com/argoproj-labs/argocd-autopilot/examples/demo-app/ -p staging
+argocd-autopilot app create my-app -p staging --app github.com/argoproj-labs/argocd-autopilot/examples/demo-app/
 
 # Add stage to app
 argocd-autopilot project create production
-argocd-autopilot app create my-app --app github.com/argoproj-labs/argocd-autopilot/examples/demo-app/ -p production
+argocd-autopilot app create my-app -p production --app github.com/argoproj-labs/argocd-autopilot/examples/demo-app/
 ``` 
 
 There also is a [branch](https://github.com/schnatterer/autopilot/tree/uninstall) that shows what happens on
